@@ -1,0 +1,38 @@
+body{
+	background:url("../luaChon/bg3.jpg") no-repeat 0px 0px; 
+ 	background-size:cover;
+}
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+	
+}
+#form-login{
+    max-width: 400px;
+    background: rgba(0, 0, 0 , 0.6);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8);
+}
+.form-heading{
+    font-size: 25px;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.btn {
+	 background: transparent;
+    border: 1px solid #f5f5f5;
+    color: #fff;
+    width: 100%;/*hiển thị khung 100%*/
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+	}
+
+input[type="submit"]:hover {
+  border: 1px solid #ff0066;
+}
