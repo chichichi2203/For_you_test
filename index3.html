@@ -6,16 +6,36 @@
         <meta name="author" content="wong2" />
         <link rel="stylesheet" href="mapLove/css/bootstrap.min.css" />
         <link rel="stylesheet" href="mapLove/css/style.css" />
+		
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVwtjIUmIdX-GInth2K3C0D59PZ2Qoz3Q&sensor=false"></script>
+	
+		<script type="text/javascript" src="mapLove/js/jquery.js"></script>
+    	
+    	<script type="text/javascript" src="mapLove/js/jquery.proximity.js"></script>
+	<title>Map Love</title>
     </head>
     <body>
-        <button id="start_btn" class="btn btn-primary btn-large centered">❤ Bắt đầu</button>
+        <button id="start_btn" class="btn btn-primary btn-large centered">❤ Bắt đầu ❤ <br> Xoay ngang màn hình nhé</button>
         <div id="map_canvas" style="width:100%; height:100%;"></div>
-        <div id="curtain"></div>
-        <div id="end_text" class="centered" style="margin-left: -250px">Em thích anh hihi</div>
+        <div id="man"></div>
+        <div id="end_text" class="centered" >
+			<li id="lovetime" class="cover">
+            <article>
+                <canvas id="myCanvas" width="700" height="700"></canvas>
+                <div id="time" style="display:none;">
+                    <h1>Khoảng thời gian chúng ta đã bên nhau</h1>
+                    <div id="clock"></div>
+                    <h4 style="max-resolution: 100px;">Love you forever.</h4>
+					<h4 style="max-resolution: 60px;margin-top: 3em">--Cún--</h4>
+                    <div id="pika" style="text-align:center;margin-top:5em;display:none;"><img src="mapLove/photos/pika.gif" /></div>
+                </div>
+            </article>
+        </li>
+
+		</div>
         <audio preload="auto" id="music">
-            <source src="mapLove/music/dadada.ogg" type="audio/ogg" />
-            <source src="mapLove/music/dadada.mp3" type="audio/mpeg" />
+            <source src="nhacnen.mp3" type="audio/mpeg" />
+     </audio>
         </audio>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -75,7 +95,7 @@
             window.theEnd = function(){
                 marker_you.setAnimation(google.maps.Animation.BOUNCE);
                 setTimeout(function(){
-                    $("#curtain").animate({
+                    $("#man").animate({
                         height: $(window).height()
                     }, 6000, function(){
                         $("#end_text").fadeIn("slow");
@@ -87,7 +107,7 @@
 			
 			//---Nam = Câu hỏi -> Dò sét tình yêu---\\
                 window.my_infowindow = new google.maps.InfoWindow({
-                    content: "Em yêu anh, anh có chập nhận không?!", //Câu hỏi cho cô cấy
+                    content: "Anh có yêu em không", //Câu hỏi cho cô cấy
                     position: HAIPHONG
                 });
                 my_infowindow.open(map);
@@ -95,8 +115,8 @@
 				//---Nữ = câu trả lời -> tình yêu--\\
                 window.your_infowindow = new google.maps.InfoWindow({
                     content: '<select>' +
-                                '<option value="yes">Có, Anh yêu em.</option>' + //Trả lời 1
-                                '<option value="yes">Không có chuyện từ chối =))</option>' + //Trả lời 2
+                                '<option value="yes">Có! Anh yêu em.</option>' + //Trả lời 1
+                                '<option value="yes">Dĩ nhiên là anh yêu em</option>' + //Trả lời 2
                              '</select>' +
                              '<input type="button" value="Gửi" ' + //Submit
                              'onclick="my_infowindow.close();your_infowindow.close();theEnd();" />',
@@ -123,8 +143,9 @@
                     { point: "30.6, 114.3", text: "我爱你" }, //Trung Hoa
 					
 					//---Ngôn Ngữ thêm---\\
-					{ point: "21.2, 105.9", text: "Em yêu anh" }, //Việt Nam
+					
                     { point: "52.1, 5.4", text: "Ik Hou Van Je" }, //Hà Lan
+					{ point: "21.2, 105.9", text: "Em yêu anh" }, //Việt Nam
                     { point: "", text: "" }, //Null
                 ];
                 var infowindows = [];
@@ -260,6 +281,10 @@
           })();
 
         </script>
-
+	
     </body>
+	<script type="text/javascript" src="mapLove/js/curtain.js"></script>
+    <script type="text/javascript" src="mapLove/js/photoshow.js"></script>
+    <script type="text/javascript" src="mapLove/js/load.js"></script>
+    <script type="text/javascript" src="mapLove/js/ltime.js"></script>
 </html>

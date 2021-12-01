@@ -17,17 +17,61 @@ body {
     margin-top: -50px;
     margin-left: -80px;
 }
-#curtain{
+#man{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0px;
+    height: 0em;
     z-index: 99999;
     background-color: #F0DADA;
 }
 #end_text{
     z-index:999999; 
     display:none; 
-    font-size: 40px;
+    
+}
+
+
+
+
+/*clock*/
+#clock {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#clock .digit {
+    font-family: "digit";
+    font-size: 3em;
+}
+/*time*/
+#time {
+    width: 37.5em;
+    height: 10.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	margin-left: -13em;
+    margin-top: -9em;
+    color: black;
+}
+#time h1 {
+    text-align: center;
+    margin-top: 1.6em;
+    font-size: 2.8em;
+    font-family: 'Lobster';
+}
+#time h4 {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Tillana';
+}
+#myCanvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21.8em;
+    margin-top: -21.8em;
 }

@@ -1,0 +1,87 @@
+li, article, canvas {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+article{
+	display: block;
+}
+img {
+    max-width: 100%
+}
+
+.end_text {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+.end_text>li {
+    background: white;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.end_text>li.hidden {
+    display: none;
+}
+.end_text>li:first-child {
+    z-index: 2;
+}
+
+/* Sliding panels */
+
+.end_text>li {
+    box-shadow: 0 1px 14px 3px #333;
+}
+.end_text>li:nth-child(2n+1) {
+    background: white;
+}
+
+/*clock*/
+#clock {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#clock .digit {
+    font-family: "digit";
+    font-size: 48px;
+}
+/*time*/
+#time {
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    color: black;
+}
+#time h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 53px;
+    font-family: 'Lobster';
+}
+#time h4 {
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Tillana';
+}
+#myCanvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -350px;
+}
