@@ -45,7 +45,7 @@ Show_Answer.addEventListener("click", () => {
 function loadQuestions(number) {
   if (number < 5) {
     fetch(
-      "https://pastebin.com/raw/4gp7JB8T"
+      "https://raw.githubusercontent.com/chichichi2203/For_you_test/main/quiz_questions_nam.json"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -89,7 +89,9 @@ function createBullets(numOfQuestion) {
 }
 
 function loadResult() {
-  fetch("https://pastebin.com/raw/4gp7JB8T")
+  fetch(
+    "https://raw.githubusercontent.com/chichichi2203/For_you_test/main/quiz_questions_nam.json"
+  )
     .then((response) => response.json())
     .then((data) => {
       clearInterval(counter);
